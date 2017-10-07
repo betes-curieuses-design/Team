@@ -1,0 +1,17 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    first_name:
+        label: First Name
+        span: left
+    last_name:
+        label: Last Name
+        span: right
+    email:
+        label: Email
+        span: left
+    job_title:
+        label: Title
+        span: right
