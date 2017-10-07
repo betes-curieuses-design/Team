@@ -9,9 +9,42 @@ fields:
     last_name:
         label: Last Name
         span: right
-    email:
-        label: Email
-        span: left
-    job_title:
-        label: Title
-        span: right
+tabs:
+    fields:
+        email:
+            label: Email
+            span: left
+            tab: Description
+
+        job_title:
+            label: Title
+            span: right
+            tab: Description
+        priority:
+            label: Priority
+            span: left
+            type: number
+            tab: Description
+        facebook_link:
+            label: Facebook
+            span: left
+            tab: Social Links
+        twitter_link:
+            label: Twitter
+            span: right
+            tab: Social Links
+        linkedin_link:
+            label: LinkedIn
+            span: left
+            tab: Social Links
+        instagram_link:
+            label: Instagram
+            span: right
+            tab: Social Links
+        photo:
+            label: Photo
+            type: fileupload
+            mode: image
+            imageHeight: 260
+            imageWidth: 260
+            tab: Description

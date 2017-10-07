@@ -89,7 +89,7 @@ class Plugin extends PluginBase
                 'order'       => 500,
                 'sideMenu' => [
                     'members' => [
-                        'label'       => 'Posts',
+                        'label'       => 'Members',
                         'icon'        => 'icon-users',
                         'url'         => Backend::url('alexcorp/team/members'),
                         'permissions' => ['alexcorp.team.access_members']

@@ -15,3 +15,7 @@ columns:
     job_title:
         label: Title
         searchable: true
+    priority:
+        label: Priority
+        type: number
+        searchable: true

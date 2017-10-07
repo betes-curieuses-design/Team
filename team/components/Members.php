@@ -1,6 +1,7 @@
 <?php namespace Alexcorp\Team\Components;
 
 use Cms\Classes\ComponentBase;
+use Alexcorp\Team\Models\Member as BaseMember;
 
 class Members extends ComponentBase
 {
@@ -21,6 +22,6 @@ class Members extends ComponentBase
     {
         $this->addCss('assets/css/team.css');
         $this->addJs('assets/js/team.js');
-
+        $this->page['members'] = BaseMember::isPublished()->get();
     }
 }

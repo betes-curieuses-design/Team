@@ -32,6 +32,13 @@ class Member extends Model
     public $morphTo = [];
     public $morphOne = [];
     public $morphMany = [];
-    public $attachOne = [];
+    public $attachOne = [
+        'photo' => 'System\Models\File'
+    ];
     public $attachMany = [];
+
+    public function scopeIsPublished($query)
+    {
+        return $query->where('published', true);
+    }
 }

@@ -13,17 +13,17 @@ class CreateMembersTable extends Migration
             $table->increments('id');
             $table->string('first_name');
             $table->string('last_name');
-            $table->string('job_title');
-            $table->string('phone');
-            $table->string('email');
-            $table->text('description');
-            $table->string('facebook_link');
-            $table->string('linkedin_link');
-            $table->string('twitter_link');
-            $table->string('pinterest_link');
-            $table->string('instagram_link');
+            $table->string('job_title')->nullable();
+            $table->string('phone')->nullable();
+            $table->string('email')->nullable();
+            $table->text('description')->nullable();
+            $table->string('facebook_link')->nullable();
+            $table->string('linkedin_link')->nullable();
+            $table->string('twitter_link')->nullable();
+            $table->string('pinterest_link')->nullable();
+            $table->string('instagram_link')->nullable();
             $table->integer('priority');
-            $table->boolean('published');
+            $table->boolean('published')->default('0');
             $table->timestamps();
         });
     }
