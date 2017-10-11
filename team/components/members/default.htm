@@ -9,8 +9,8 @@
                             <!-- front content -->
                             <div class="card">
                                 <img class="card-img-top" src="{{ member.photo.path }}"
-                                     style="height: 180px; width: 100%; display: block;" data-holder-rendered="true">
-                                <div class="card-block">
+                                     style="height: 300px; width: 100%; display: block;" data-holder-rendered="true">
+                                <div class="card-body">
                                     <h4 class="card-title">
                                         {{ member.first_name }}&nbsp;{{ member.last_name }}
                                     </h4>
@@ -22,18 +22,42 @@
                         <div class="back">
                             <!-- back content -->
                             <div class="card">
-                                <div class="card-block">
-                                    <h4 class="card-title">Card Flip</h4>
-                                    <h6 class="card-subtitle text-muted">Support card subtitle</h6>
+                                <div class="card-body">
+                                    <h4 class="card-title">
+                                        {{ member.first_name }}&nbsp;{{ member.last_name }}
+                                    </h4>
+                                    <h6 class="card-subtitle text-muted">
+                                        {{ member.description|raw }}
+                                    </h6>
                                 </div>
-                                <img data-src="holder.js/100px180/?text=Image" alt="Image [100%x180]"
-                                     data-holder-rendered="true" style="height: 180px; width: 100%; display: block;">
-                                <div class="card-block">
-                                    <p class="card-text">Some quick example text to build on the card title and make up
-                                        the
-                                        bulk of the card's content.</p>
-                                    <a href="#" class="card-link">Card link</a>
-                                    <a href="#" class="card-link">Another link</a>
+
+                                <div class="card-body">
+                                    <p class="card-text">
+                                        <i class="fa fa-phone"></i>&nbsp;
+                                        {{ member.phone }}<br>
+                                        <i class="fa fa-envelope-o"></i>&nbsp;
+                                        {{ member.email }}
+                                    </p>
+                                    <p class="text-left">
+                                        <a href="{{ member.facebook_link }}" class="card-link">
+                                            <i class="fa fa-facebook-square fa-2x"></i>
+                                        </a>
+                                        {% if member.twitter_link %}
+                                            <a href="{{ member.twitter_link }}" class="card-link">
+                                                <i class="fa fa-twitter-square fa-2x"></i>
+                                            </a>
+                                        {% endif %}
+                                        {% if member.linkedin_link %}
+                                            <a href="{{ member.linkedin_link }}" class="card-link">
+                                                <i class="fa fa-linkedin-square fa-2x"></i>
+                                            </a>
+                                        {% endif %}
+                                        {% if member.instagram_link %}
+                                            <a href="{{ member.instagram_link }}" class="card-link">
+                                                <i class="fa fa-instagram fa-2x"></i>
+                                            </a>
+                                        {% endif %}
+                                    </p>
                                 </div>
                             </div>
                         </div>

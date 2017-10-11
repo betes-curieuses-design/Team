@@ -20,9 +20,17 @@ tabs:
             label: Title
             span: right
             tab: Description
+        description:
+            label: Description
+            type: richeditor
+            tab: Description
+        phone:
+            label: Phone
+            span: left
+            tab: Description
         priority:
             label: Priority
-            span: left
+            span: right
             type: number
             tab: Description
         facebook_link:
@@ -41,10 +49,16 @@ tabs:
             label: Instagram
             span: right
             tab: Social Links
+
+
+secondaryTabs:
+    fields:
         photo:
             label: Photo
             type: fileupload
             mode: image
-            imageHeight: 260
-            imageWidth: 260
-            tab: Description
+            imageHeight: 210
+            imageWidth: 210
+        published:
+            label: Published
+            type: switch
